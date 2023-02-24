@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+  animation: gradient 7s ease infinite;
+  background-size: 200% 200%;
+  font-size: 1.6rem;
+
+  display: grid;
+  place-items: center;
+
+  height: 100vh;
+}
+
+body,
+button {
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  background: #ffffff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+
+  width: min(42.8rem, 85%);
+
+  padding: 6.4rem;
+  margin-top: -10rem;
+
+  text-align: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+
+  color: #34355b;
+}
+
+p {
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  color: #34355b;
+}
+
+button {
+  background: #ff9500;
+  border: none;
+  border-radius: 0.4rem;
+
+  padding: 1.6rem;
+
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+
+  text-align: center;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#cookie {
+  cursor: pointer;
+}
+
+#cookie:hover {
+  animation: shake 0.2s infinite;
+}
+
+#message {
+  animation: climbUp 0.5s backwards;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes climbUp {
+  0% {
+    scale: 0.2;
+    transform: translateY(400px);
+  }
+
+  100% {
+    scale: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
